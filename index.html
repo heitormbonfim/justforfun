@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Oh...</title>
+    <title>Ops...</title>
     <style>
       body {
         height: 100vh;
@@ -13,10 +13,10 @@
         background-color: black;
         color: lime;
         background-image: linear-gradient(
-            rgba(0, 0, 0, 0.8),
-            rgba(0, 0, 0, 0.8)
+            rgba(0, 0, 0, 0.7),
+            rgba(0, 0, 0, 0.7)
           ),
-          url("./maxresdefault.webp");
+          url("./maxresdefault.jpg");
         background-repeat: no-repeat;
         background-size: cover;
         background-position: top;
@@ -25,6 +25,7 @@
       h1 {
         max-width: 400px;
         text-align: center;
+        text-shadow: 0 0 10px black;
       }
 
       span {
@@ -35,12 +36,28 @@
   <body>
     <h1>
       You just got <br />
-      <span>!!</span>HACKED<span>!!</span>
+      <span>!!</span>
+      <span id="change-color">HACKED</span>
+      <span>!!</span>
     </h1>
     <script>
+      const span = document.querySelector('#change-color')
+      const colors = ['red', 'lime', 'blue', 'white']
+      let count = 0
+
+      setInterval(()=> {
+        span.style.color = colors[count]
+        count++
+        
+        if (count > 3) {
+          count = 0
+        }
+      }, 50)
+
+
       setTimeout(() => {
-        window.location.replace("https://youtu.be/stdyhfeYxxI?t=44");
+        window.location.replace("https://youtu.be/RHRKu5mStNk?t=35");
       }, 1000);
-    </script>
+      </script>
   </body>
 </html>
